@@ -15,3 +15,6 @@
 .resultList img:hover {
     transform: scale(1.1);
 }
+.notfound{
+    color: #fff;
+}

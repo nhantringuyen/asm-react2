@@ -30,9 +30,12 @@ function SearchPage() {
 			{loading ? (
 				<p>Loading...</p> // Loading indicator
 			) : (
+				<>
 				<ResultList movies={movies} onSelectMovie={setSelectedMovie} />
+			    {selectedMovie && <MovieDetail movieData={selectedMovie} />}
+				</>
 			)}
-			{selectedMovie && <MovieDetail movieData={selectedMovie} />}
+
 		</div>
 	);
 }

@@ -6,14 +6,18 @@ function ResultList({ movies, onSelectMovie }) {
 
     return (
         <div className={classes.resultList}>
-            {movies.map(movie => (
-                <img
-                    key={movie.id}
-                    src={`${base_url}${movie.poster_path}`}
-                    alt={movie.title}
-                    onClick={() => onSelectMovie(movie)}
-                />
-            ))}
+            {movies.length > 0 ? (
+                movies.map(movie => (
+                    <img
+                        key={movie.id}
+                        src={`${base_url}${movie.poster_path}`}
+                        alt={movie.title}
+                        onClick={() => onSelectMovie(movie)}
+                    />
+                ))
+            ) : (
+                <p className={classes.notfound}>Không có bộ phim nào được tìm thấy.</p>
+            )}
         </div>
     );
 }

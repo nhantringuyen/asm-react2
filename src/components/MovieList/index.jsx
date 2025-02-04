@@ -28,6 +28,7 @@ function MovieList({ title, fetchUrl, isLargeRow = false, isOriginal = false }) 
 
     const sliderSettings = {
         dots: false,
+        nav:false,
         infinite: true,
         speed: 500,
         slidesToShow: 6,
